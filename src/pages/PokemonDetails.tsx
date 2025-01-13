@@ -24,7 +24,11 @@ const PokemonDetails: React.FC = () => {
       <h2 className="text-3xl font-semibold capitalize text-center mb-4">{details.name}</h2>
       
       <div className="flex justify-center mb-6">
-        <img src={details.sprites.front_default} alt={details.name} className="w-48 h-48 rounded-full border-4 border-blue-500" />
+        <img
+          src={details.sprites.front_default}
+          alt={details.name}
+          className="w-64 h-64 rounded-full border-4 border-blue-500 shadow-xl"
+        />
       </div>
 
       <div className="space-y-4 text-lg text-gray-800">
