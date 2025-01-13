@@ -1,0 +1,77 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+
+# Build output
+dist/
+dist-ssr/
+.vite/
+coverage/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Vite
+vite.config.d.ts
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Optional npm cache directory
+.npm
+
+# Optional Yarn/PNPM cache directories
+.yarn/cache/
+.pnpm-store/
+
+# Optional lock files
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Temporary files
+.tmp/
+out/
+
+# Git hooks
+.husky/
+
+# Generated files
+.vscode/settings.json
+
+build
