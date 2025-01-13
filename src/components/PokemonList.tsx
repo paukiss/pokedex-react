@@ -6,17 +6,17 @@ const PokemonList: React.FC = () => {
   const [pokemonList, setPokemonList] = useState<{ name: string; url: string }[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(0);
-  const [totalPages, setTotalPages] = useState(0); // Suponiendo que la API te da información sobre el total de páginas
+  const [totalPages, setTotalPages] = useState(0);
 
   const PAGE_SIZE = 20;
 
   const loadPokemon = async (page: number) => {
     setLoading(true);
-    const offset = page * PAGE_SIZE; // Cálculo del OFFSET basado en la página actual
+    const offset = page * PAGE_SIZE;
     const data = await fetchPokemonList(PAGE_SIZE, offset);
-    
+
     setPokemonList(data.results);
-    setTotalPages(Math.ceil(data.count / PAGE_SIZE)); // Suponiendo que la API devuelve un `count` total de Pokémon
+    setTotalPages(Math.ceil(data.count / PAGE_SIZE));
     setLoading(false);
   };
 
@@ -40,7 +40,6 @@ const PokemonList: React.FC = () => {
 
   return (
     <div>
-      
       <div className="pagination-controls text-center mt-4">
         <button 
           onClick={handlePrevPage} 
@@ -58,7 +57,8 @@ const PokemonList: React.FC = () => {
           Siguiente
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mt-4">
         {pokemonList.map((pokemon) => (
           <PokemonCard key={pokemon.name} name={pokemon.name} />
         ))}

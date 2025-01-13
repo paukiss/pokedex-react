@@ -18,10 +18,13 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ name }) => {
   }, [name]);
 
   return (
-    <div className="p-4 bg-white shadow rounded flex flex-col items-center">
-      <img src={image} alt={name} className="w-24 h-24" />
+    <div className="p-4 bg-white shadow rounded flex flex-col items-center w-full max-w-xs">
+      <img src={image} alt={name} className="w-32 h-32 mb-4" />
       <h2 className="text-lg font-bold capitalize">{name}</h2>
-      <Link to={`/pokemon/${name}`} className="mt-2 bg-blue-500 text-white py-1 px-4 rounded text-center">
+      <Link
+        to={`/pokemon/${name}`}
+        className="mt-2 bg-blue-500 text-white py-1 px-4 rounded text-center"
+      >
         Ver Detalles
       </Link>
     </div>
