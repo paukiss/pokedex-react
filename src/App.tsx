@@ -1,12 +1,19 @@
 import React from "react";
-import PokemonList from "./components/PokemonList";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import PokemonList from "./components/PokemonList"; // Asumiendo que tienes una lista de Pokémon
+import './App.css';
+import PokemonDetails from "./pages/PokemonDetails";
 
 const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Pokedex</h1>
-      <PokemonList />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<PokemonList />} />
+          <Route path="/pokemon/:name" element={<PokemonDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 
