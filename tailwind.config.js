@@ -8,5 +8,5 @@ module.exports = {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {},
-  plugins: [require("tailwindcss-animate")],
+  plugins: [],
 };
